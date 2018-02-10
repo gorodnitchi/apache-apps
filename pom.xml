@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>groupId</groupId>
+    <artifactId>apache-apps-github</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.test.failure.ignore>true</maven.test.failure.ignore>
+
+        <spring.versionn>4.1.0.RELEASE</spring.versionn>
+        <spring.batch.version>2.2.0.RELEASE</spring.batch.version>
+        <junit.version>4.11</junit.version>
+
+        <!--
+            <scala.binary.version>2.11</scala.binary.version>
+            <project.version>2.1.0</project.version>
+
+              <scala.base>2.10</scala.base>
+                <scala.version>${scala.base}.4</scala.version>
+       -->
+    </properties>
+
+    <dependencies>
+
+        <!-- JUnit -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.7</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${spring.versionn}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- Log -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.5</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.0.13</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- Spring aritifacts -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.versionn}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.versionn}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+            <version>3.2.2.RELEASE</version>
+        </dependency>
+
+        <!-- Spring Batch dependencies -->
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-core</artifactId>
+            <version>${spring.batch.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-infrastructure</artifactId>
+            <version>${spring.batch.version}</version>
+        </dependency>
+
+
+        <!-- Spark -->
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-core_2.11</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-mllib_2.11</artifactId>
+            <version>2.1.0</version>
+        </dependency>
+
+        <!--
+                <dependency>
+                  <groupId>org.apache.spark</groupId>
+                  <artifactId>spark-streaming_2.11</artifactId>
+                  <version>2.2.1</version>
+                 </dependency>
+
+
+
+                <dependency>
+                  <groupId>org.apache.spark</groupId>
+                  <artifactId>spark-hive_2.11</artifactId>
+                  <version>2.1.0</version>
+                </dependency>
+                <dependency>
+                  <groupId>org.apache.spark</groupId>
+                  <artifactId>spark-graphx_2.11</artifactId>
+                  <version>2.1.0</version>
+                 </dependency>
+                <dependency>
+                  <groupId>org.apache.spark</groupId>
+                  <artifactId>spark-streaming-flume_2.11</artifactId>
+                  <version>2.1.0</version>
+                </dependency>
+
+                <dependency>
+                    <groupId>org.apache.spark</groupId>
+                    <artifactId>spark-streaming-kafka-0-8_2.11</artifactId>
+                    <version>2.1.0</version>
+                </dependency>
+
+
+                <dependency>
+                  <groupId>org.apache.spark</groupId>
+                  <artifactId>spark-sql_2.11</artifactId>
+                  <version>2.1.0</version>
+                </dependency>
+
+                <dependency>
+                  <groupId>org.apache.commons</groupId>
+                  <artifactId>commons-math3</artifactId>
+                  <version>3.0</version>
+                </dependency>
+                <dependency>
+                  <groupId>org.scalacheck</groupId>
+                  <artifactId>scalacheck_2.11</artifactId>
+                  <version>1.9</version>
+                </dependency>
+                <dependency>
+                  <groupId>com.github.scopt</groupId>
+                  <artifactId>scopt_2.11</artifactId>
+                  <version>3.3.0</version>
+                </dependency>
+                <dependency>
+                  <groupId>com.twitter</groupId>
+                  <artifactId>parquet-hadoop-bundle</artifactId>
+                  <version>1.6.0</version>
+                </dependency>
+         -->
+
+        <!-- Scala-->
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+            <version>2.11.11</version>
+        </dependency>
+
+
+        <!--
+        <dependency>
+          <groupId>org.scala-lang</groupId>
+          <artifactId>scala-reflect</artifactId>
+          <version>2.11.7</version>
+        </dependency>
+        <dependency>
+          <groupId>org.scala-lang</groupId>
+          <artifactId>scalap</artifactId>
+          <version>2.11.7</version>
+        </dependency>
+         -->
+
+        <!--
+            <dependency>
+              <groupId>org.scalatest</groupId>
+              <artifactId>scalatest_2.11</artifactId>
+              <version>2.2.0-RC1</version>
+              <scope>test</scope>
+            </dependency>
+         -->
+
+        <!-- kafka
+       <dependency>
+           <groupId>org.apache.kafka</groupId>
+           <artifactId>kafka-clients</artifactId>
+           <version>0.9.0.0</version>
+       </dependency>
+       <dependency>
+           <groupId>org.apache.kafka</groupId>
+           <artifactId>kafka_2.10</artifactId>
+           <version>0.8.0</version>
+       </dependency>
+      -->
+
+
+        <!-- cassandra -->
+        <dependency>
+            <groupId>com.datastax.cassandra</groupId>
+            <artifactId>cassandra-driver-core</artifactId>
+            <version>3.3.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.datastax.cassandra</groupId>
+            <artifactId>cassandra-driver-mapping</artifactId>
+            <version>3.3.2</version>
+        </dependency>
+
+
+        <!--
+          <dependency>
+            <groupId>com.datastax.spark</groupId>
+            <artifactId>spark-cassandra-connector</artifactId>
+            <version>1.0.0-rc5</version>
+          </dependency>
+          <dependency>
+            <groupId>com.datastax.spark</groupId>
+            <artifactId>spark-cassandra-connector-java</artifactId>
+            <version>1.0.0-rc5</version>
+          </dependency>
+          -->
+
+    </dependencies>
+
+
+
+    <build>
+        <pluginManagement>
+            <plugins>
+
+                <plugin>
+                    <groupId>net.alchim31.maven</groupId>
+                    <artifactId>scala-maven-plugin</artifactId>
+                    <executions>
+                        <execution>
+                            <id>scala-compile-first</id>
+                            <phase>process-resources</phase>
+                            <goals>
+                                <goal>add-source</goal>
+                                <goal>compile</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>scala-test-compile</id>
+                            <phase>process-test-resources</phase>
+                            <goals>
+                                <goal>testCompile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <source>1.8</source>
+                        <target>1.8</target>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>compile</phase>
+                            <goals>
+                                <goal>compile</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <artifactId>maven-assembly-plugin</artifactId>
+                    <version>2.5.3</version>
+                    <configuration>
+                        <descriptorRefs>
+                            <descriptorRef>jar-with-dependencies</descriptorRef>
+                        </descriptorRefs>
+                        <archive>
+                            <manifest>
+                                <mainClass>ScalaRunner</mainClass>
+                            </manifest>
+                        </archive>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <phase>package</phase>
+                            <goals>
+                                <goal>single</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
+
+            </plugins>
+        </pluginManagement>
+    </build>
+
+
+</project>
